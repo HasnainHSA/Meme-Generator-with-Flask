@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Meme</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Create Your Meme</h1>
+        <form action="/generate" method="POST" enctype="multipart/form-data" class="meme-form">
+            <label for="image" class="form-label">Select Image:</label>
+            <input type="file" name="image" id="image" class="form-input" required><br>
+
+            <label for="top_text" class="form-label">Top Text:</label>
+            <input type="text" name="top_text" id="top_text" class="form-input" placeholder="Write your top text">
+
+            <label for="bottom_text" class="form-label">Bottom Text:</label>
+            <input type="text" name="bottom_text" id="bottom_text" class="form-input" placeholder="Write your bottom text">
+
+            <button type="submit" class="btn-submit">Generate Meme</button>
+        </form>
+    </div>
+</body>
+</html>
